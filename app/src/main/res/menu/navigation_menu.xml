@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText">
+
+    <item
+        android:icon="@drawable/ic_baseline_home_24"
+        android:id="@+id/homepage"
+        android:title="Home"/>
+
+    <item
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:id="@+id/accountpage"
+        android:title="Account" />
+
+    <item
+        android:icon="@drawable/ic_baseline_list_alt_24"
+        android:id="@+id/parkingHistoryPage"
+        android:title="Parking History"/>
+
+    <item
+        android:icon="@drawable/ic_baseline_settings_24"
+        android:id="@+id/settings"
+        android:title="Settings" />
+
+    <item
+        android:icon="@drawable/ic_baseline_sensor_door_24"
+        android:id="@+id/nav_logout"
+        android:title="Logout" />
+
+</menu>

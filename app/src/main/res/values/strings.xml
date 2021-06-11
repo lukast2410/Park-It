@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Park It!</string>
+    <string name="navigation_open">Open</string>
+    <string name="navigation_close">Close</string>
+</resources>
