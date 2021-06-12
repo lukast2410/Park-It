@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".SearchActivity"
+    android:orientation="vertical">
+
+    <!--Search-->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Search for your destination"
+                android:background="@drawable/card_view_border"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"/>
+
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:background="@color/white"
+                android:src="@drawable/ic_baseline_search_24"
+                app:tint="@color/main_color"/>
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <!--Search History-->
+    <LinearLayout
+        android:id="@+id/llSearchParkingHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llBookedParking"
+        android:padding="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvSearchParkingHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:text="Search History"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/main_color"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSearchParkingHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <!--    Nearby Parking Lots-->
+    <LinearLayout
+        android:id="@+id/llNearbyParkingLots"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llBookedParking"
+        android:padding="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvNearbyParkingLots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:text="Nearby Parking Lots"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/main_color"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvNearbyParkingLots"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>
