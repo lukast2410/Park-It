@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
 
@@ -24,6 +25,7 @@ public class All extends Fragment implements ParkingHistoryAdapter.HistoryClickL
     private ArrayList<Transaction> allHistory;
     private ParkingHistoryAdapter parkingHistoryAdapter;
     RecyclerView rvAllHistory;
+    RelativeLayout rlNoHistory;
 
     public static All newInstance(){
         return new All();
@@ -42,7 +44,14 @@ public class All extends Fragment implements ParkingHistoryAdapter.HistoryClickL
 
     private void initializeAllHistory(View view) {
         rvAllHistory = (RecyclerView) view.findViewById(R.id.rvAllHistory);
+        rlNoHistory = (RelativeLayout) view.findViewById(R.id.rlNoParkingHistory);
         allHistory = Transaction.getMyTransactionHistory(getContext());
+        if (allHistory == null || allHistory.size() == 0) {
+            rlNoHistory.setVisibility(View.VISIBLE);
+            return;
+        }
+
+        rlNoHistory.setVisibility(View.GONE);
         parkingHistoryAdapter = new ParkingHistoryAdapter(allHistory, this);
         rvAllHistory.setLayoutManager(new LinearLayoutManager(getContext()));
         rvAllHistory.setItemAnimator(new DefaultItemAnimator());

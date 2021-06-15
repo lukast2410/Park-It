@@ -142,21 +142,29 @@
 
                 </LinearLayout>
 
-                <TextView
+                <LinearLayout
+                    android:id="@+id/llVoucherContainerACC"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="BONUS VOUCHER"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="5dp"
-                    android:textColor="@color/main_color"
-                    android:layout_marginHorizontal="20dp"/>
+                    android:orientation="vertical">
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rvVoucher"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:nestedScrollingEnabled="false"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="BONUS VOUCHER"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="5dp"
+                        android:textColor="@color/main_color"
+                        android:layout_marginHorizontal="20dp"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvVoucher"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:nestedScrollingEnabled="false"/>
+
+                </LinearLayout>
 
             </LinearLayout>
 

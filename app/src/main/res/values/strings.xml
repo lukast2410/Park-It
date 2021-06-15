@@ -48,4 +48,7 @@
     <string name="shopee_pay">ShopeePay</string>
     <string name="free_booking_fee">Free Booking Fee</string>
     <string name="rp3000">Rp 3.000,00</string>
+    <string name="no_parking_history">There is no parking history</string>
+    <string name="no_car_parking_history">There is no car parking history</string>
+    <string name="no_motorcycle_parking_history">There is no motorcycle parking history</string>
 </resources>

@@ -15,6 +15,7 @@ import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -37,7 +38,7 @@ public class AccountActivity extends AppCompatActivity implements NavigationView
     DrawerLayout drawerLayout;
     NavigationView navigationView;
     ActionBarDrawerToggle actionBarDrawerToggle;
-    LinearLayout llCarBonus, llMotorBonus;
+    LinearLayout llCarBonus, llMotorBonus, llVouchers;
     TextView tvUsername;
     RecyclerView rvVoucher;
 
@@ -55,7 +56,14 @@ public class AccountActivity extends AppCompatActivity implements NavigationView
 
     private void initializeVouchers() {
         rvVoucher = (RecyclerView) findViewById(R.id.rvVoucher);
+        llVouchers = (LinearLayout) findViewById(R.id.llVoucherContainerACC);
         vouchers = Voucher.getMyVoucher(this);
+        if (vouchers == null || vouchers.size() == 0){
+            llVouchers.setVisibility(View.GONE);
+            return;
+        }
+
+        llVouchers.setVisibility(View.VISIBLE);
         voucherAdapter = new VoucherAdapter(vouchers, this);
         rvVoucher.setLayoutManager(new LinearLayoutManager(this));
         rvVoucher.setItemAnimator(new DefaultItemAnimator());

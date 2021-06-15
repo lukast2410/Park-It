@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 
 import java.util.ArrayList;
 
@@ -22,6 +23,7 @@ public class Motorcycles extends Fragment implements ParkingHistoryAdapter.Histo
     private ArrayList<Transaction> motorcycleHistory;
     private ParkingHistoryAdapter parkingHistoryAdapter;
     RecyclerView rvMotorcycleHistory;
+    RelativeLayout rlNoHistory;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -36,7 +38,14 @@ public class Motorcycles extends Fragment implements ParkingHistoryAdapter.Histo
 
     private void initializeMotorcycleHistory(View view) {
         rvMotorcycleHistory = (RecyclerView) view.findViewById(R.id.rvMotorcycleHistory);
+        rlNoHistory = (RelativeLayout) view.findViewById(R.id.rlNoMotorcycleParkingHistory);
         motorcycleHistory = Transaction.getMyMotorcycleTransactionHistory(getContext());
+        if (motorcycleHistory == null || motorcycleHistory.size() == 0){
+            rlNoHistory.setVisibility(View.VISIBLE);
+            return;
+        }
+
+        rlNoHistory.setVisibility(View.GONE);
         parkingHistoryAdapter = new ParkingHistoryAdapter(motorcycleHistory, this);
         rvMotorcycleHistory.setLayoutManager(new LinearLayoutManager(getContext()));
         rvMotorcycleHistory.setItemAnimator(new DefaultItemAnimator());
