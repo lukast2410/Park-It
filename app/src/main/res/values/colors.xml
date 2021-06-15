@@ -12,7 +12,12 @@
     <color name="main_color">#3359AA</color>
     <color name="green">#99E7C6</color>
     <color name="red">#A43347</color>
+    <color name="red_flat">#E8AE4557</color>
     <color name="baby_blue">#98AAD0</color>
     <color name="orange">#FFC062</color>
+    <color name="grey">#979797</color>
+    <color name="blue_dana">#008ceb</color>
+    <color name="purple_ovo">#4c3494</color>
+    <color name="orange_shopee">#f44336</color>
 
 </resources>

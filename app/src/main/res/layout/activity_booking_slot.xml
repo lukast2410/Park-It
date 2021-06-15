@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookingSlotActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="25dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="10dp"
+                    android:text="@string/parking_lot"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/main_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingVertical="10dp"
+                    android:paddingHorizontal="15dp"
+                    android:background="@drawable/style_bordered">
+
+                    <TextView
+                        android:id="@+id/tvMallNameBS"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mall"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_marginBottom="5dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="5dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_baseline_layers_24"
+                            app:tint="@color/main_color"
+                            android:layout_marginEnd="10dp"/>
+
+                        <TextView
+                            android:id="@+id/tvBookingFloor"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/ug_floor"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/main_color"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="5dp">
+
+                        <ImageView
+                            android:id="@+id/ivVehicleType"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_baseline_directions_car_24"
+                            app:tint="@color/main_color"
+                            android:layout_marginEnd="10dp"/>
+
+                        <TextView
+                            android:id="@+id/tvBookingAvailableSlots"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/available_slot"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/main_color"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_baseline_access_time_24"
+                            app:tint="@color/main_color"
+                            android:layout_marginEnd="10dp"/>
+
+                        <TextView
+                            android:id="@+id/tvPricePerHour"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/price_hour"
+                            android:gravity="center_vertical"
+                            android:textColor="@color/main_color"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="20dp"
+                    android:paddingHorizontal="15dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginEnd="20dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginVertical="5dp">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/ic_baseline_directions_car_24"
+                                app:tint="@color/black"
+                                android:layout_marginEnd="10dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/vehicle_type"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:gravity="center_vertical"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginVertical="5dp">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/ic_baseline_credit_card_24"
+                                app:tint="@color/black"
+                                android:layout_marginEnd="10dp"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="@string/booking_fee"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:gravity="center_vertical"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="2dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/grey"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="20dp">
+
+                        <TextView
+                            android:id="@+id/tvVehicleTypeBS"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="@string/car"
+                            android:textSize="18sp"
+                            android:textColor="@color/main_color"
+                            android:textStyle="bold"
+                            android:gravity="center_vertical"
+                            android:layout_marginVertical="5dp"/>
+
+                        <TextView
+                            android:id="@+id/tvBookingFee"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:text="@string/price"
+                            android:textSize="18sp"
+                            android:textColor="@color/main_color"
+                            android:textStyle="bold"
+                            android:gravity="center_vertical"
+                            android:layout_marginVertical="5dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="end"
+                    android:layout_marginBottom="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/total"
+                        android:textColor="@color/red"
+                        android:textSize="25sp"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="20dp"/>
+
+                    <TextView
+                        android:id="@+id/tvTotalPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/price"
+                        android:textColor="@color/red"
+                        android:textStyle="bold"
+                        android:textSize="25sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/choose_payment"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginBottom="5dp"
+                android:layout_marginHorizontal="25dp"/>
+
+            <!--    TODO: make radio button custom for payment method-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginHorizontal="25dp"
+                app:cardElevation="7dp">
+
+                <RadioGroup
+                    android:id="@+id/rgPaymentMethod"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/style_bordered"
+                    android:paddingVertical="10dp"
+                    android:paddingHorizontal="25dp"
+                    android:checkedButton="@id/rbGoPay">
+
+                    <RadioButton
+                        android:id="@+id/rbGoPay"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:text="@string/go_pay"
+                        android:textColor="@android:color/transparent"
+                        android:drawableEnd="@drawable/selector_payment_method"
+                        android:drawableStart="@drawable/ic_gopay_30"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/grey"/>
+
+                    <RadioButton
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:text="@string/ovo"
+                        android:textColor="@android:color/transparent"
+                        android:drawablePadding="30dp"
+                        android:drawableEnd="@drawable/selector_payment_method"
+                        android:drawableStart="@drawable/ic_ovo"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/grey"/>
+
+                    <RadioButton
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:text="@string/dana"
+                        android:textColor="@android:color/transparent"
+                        android:drawablePadding="30dp"
+                        android:drawableEnd="@drawable/selector_payment_method"
+                        android:drawableStart="@drawable/ic_dana"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/grey"/>
+
+                    <RadioButton
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:text="@string/shopee_pay"
+                        android:textColor="@android:color/transparent"
+                        android:drawablePadding="30dp"
+                        android:drawableEnd="@drawable/selector_payment_method"
+                        android:drawableStart="@drawable/ic_shopeepay"/>
+
+                </RadioGroup>
+
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="25dp">
+
+                <Button
+                    android:id="@+id/btnBook"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/book"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:background="@drawable/button_rounded"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

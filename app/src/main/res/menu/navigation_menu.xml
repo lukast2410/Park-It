@@ -6,7 +6,7 @@
     <item
         android:icon="@drawable/ic_baseline_home_24"
         android:id="@+id/homepage"
-        android:title="Home"/>
+        android:title="Home" />
 
     <item
         android:icon="@drawable/ic_baseline_account_circle_24"
